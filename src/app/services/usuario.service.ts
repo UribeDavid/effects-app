@@ -15,5 +15,9 @@ export class UsuarioService {
   getUsers() {
     return this.http.get(`${this.url}/users`).pipe( pluck('data') );
   }
+  
+  getUserById(id:string) {
+    return this.http.get(`${this.url}/users/${id}`).pipe( pluck('data') );
+  }
 
 }
